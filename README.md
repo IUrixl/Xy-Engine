@@ -37,7 +37,7 @@ And then make a .zip only with the content inside of Game folder, change te exte
 ```lua
   local myMesh = xyEngine:NewMesh(path) -- It will create the mesh and return you the id of the mesh
 ```
-#### Transform X/Y of a mesh
+#### Transforming X/Y of a mesh
 ```lua
   xyEngine:TransformX(id, x) -- The second argument is a vector value
   xyEngine:TransformY(id, y) -- The second argument is a vector value
