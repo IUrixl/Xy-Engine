@@ -47,6 +47,16 @@ And then make a .zip only with the content inside of Game folder, change te exte
   xyEngine:ScaleX(id, x) -- The second argument is a vector value
   xyEngine:ScaleY(id, y) -- The second argument is a vector value
 ```
+#### Scaling mesh
+```lua
+  xyEngine:Scale(id, x, y) -- 1. How much you want to scale X. 2. How much you want to scale Y.
+```
+
+#### Transforming mesh
+```lua
+  xyEngine:Transform(id, x, y) -- 1. How much you want to transform X. 2. How much you want to transform Y.
+```
+
 #### Rendering a mesh
 ```lua
   function love.draw()
