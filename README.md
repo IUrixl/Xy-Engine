@@ -31,12 +31,39 @@ We recomend to structure your folder like this.
       
 And then make a .zip only with the content inside of Game folder, change te extension to .love
 
+## Errors and how to fix it
+### File "x.xymesh.xymesh" doesn't exist
+Solution
+```lua
+  function myMeshes()
+    myMesh = xyEngine:NewMesh("mesh/box") -- Do not add .xymesh extension, xyEngine adds it for you
+  end
+```
+
+### Attempt to index a nil value
+To fix it do that
+```lua
+  function love.load()
+    require "lib.xyEngine"
+    myMeshes()
+  end
+  
+  function myMeshes()
+    myMesh = xyEngine:NewMesh(path)
+  end
+```
+
 ## Resources
 ### Mesh
 #### Creating a new mesh
 ```lua
-  local myMesh = xyEngine:NewMesh(path) -- It will create the mesh and return you the id of the mesh
+  myMesh = xyEngine:NewMesh(path) -- It will create the mesh and return you the id of the mesh
 ```
+#### Removing a mesh
+```lua
+  xyEngine:RemoveMesh(id)
+```
+
 #### Transforming X/Y of a mesh
 ```lua
   xyEngine:TransformX(id, x) -- The second argument is a vector value
@@ -62,4 +89,15 @@ And then make a .zip only with the content inside of Game folder, change te exte
   function love.draw()
     xyEngine:Render(id)
   end
+```
+
+### Getting info
+#### Getting vertices from a mesh
+```lua
+  local vertices = xyEngine:GetVertices(id)
+```
+
+#### Getting active meshes
+```lua
+  local meshes = xyEngine:GetMeshes()
 ```
