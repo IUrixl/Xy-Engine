@@ -1,7 +1,7 @@
 # Release
 ***Xy Engine Out now!***
 
-Xy Mesh Editor isn't released by the moment, stay tunned.
+[***XyMeshEditor Out now!***](https://github.com/IUrixl/XyMeshTool, "Direct link to XyMeshEditor")
 
 # Xy-Engine
 Xy Engine tool is the library made to help you with rendering your .xymesh meshes.
